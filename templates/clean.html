@@ -1,0 +1,50 @@
+{% extends "dashboard.html" %}
+{% block content %}
+  {{super()}}
+    <div class="view">
+      <h4>Clean Tweets</h4>
+      <label for="entries">Show
+        <select id="entries" onchange="chageEntries()">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+          <option value="{{data|length-1}}">All</option>
+        </select>
+        entries
+      </label>
+      {% if data%}
+     <table id="data-table">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>tweet </th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for row in data[1:] %}
+      <tr>
+
+        <td>{{ loop.index }} </td>
+        <td style="line-break: auto;">{{row[0]}} </td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+     </table>
+     {% else %}
+     <p>No data found</p>
+     {% endif %}
+    </div>
+    <script>
+      function chageEntries(){
+        const table = document.getElementById('data-table');
+        const row = table.getElementsByTagName('tbody')[0].rows;
+        const max = parseInt(document.getElementById('entries').value);
+        for(let i=0;i<row.length;i++){
+          row[i].style.display = i<max?'':'none';
+        }
+      }
+      window.onload = chageEntries;
+    </script>
+  {% endblock %}

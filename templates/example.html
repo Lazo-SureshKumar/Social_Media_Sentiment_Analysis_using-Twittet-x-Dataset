@@ -1,0 +1,12 @@
+{% extends "dashboard.html" %}
+
+{% block content %}
+  {{super()}}
+    <div class="dataset">
+      <h2>Upload Datset</h2>
+      <form action="/templates/upload_dataset.html" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+  {% endblock %}

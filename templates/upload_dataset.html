@@ -1,0 +1,23 @@
+{% extends "dashboard.html" %}
+{% block content %}
+  {{super()}}
+    <div class="row">
+    <div class="dataset" >
+      <h2 style="font-size: 10px; font-weight: lighter;">Upload Datset</h2> 
+      <div class="upload">
+      <form action="/upload_dataset" method="post" enctype="multipart/form-data">
+        <p>Upload Tweet(csv file)</p>
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Upload</button>
+      </form>
+      </div>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          {{message}}
+        {% endfor %}
+      {% endif %}
+      {% endwith %}
+    </div>
+  </div>
+  {% endblock %}

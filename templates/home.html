@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Social media analysis</title>
+	<link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+	{% include 'header.html' %}
+	<div class="login-container">
+		<h4>Login</h4>
+		<div class="log">
+		<form method="post">
+			<label>User Name</label>
+			<input type="text" name="username" placeholder="" required/>
+			<label>Password</label>
+			<input type="password" name="password" placeholder="" required/>
+			<button type="submit">Login</button>
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			<div class="alert alert-info" role="alert">
+				{{message}}
+			</div>
+			{% endfor %}
+			{% endif%}
+		{% endwith %}
+		</form>
+	</div>
+</div>
+</body>
+</html>

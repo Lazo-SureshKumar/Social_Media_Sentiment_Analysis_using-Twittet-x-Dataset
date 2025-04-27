@@ -1,0 +1,31 @@
+{% extends "dashboard.html" %}
+{% block content %}
+  {{super()}}
+    <div class="view">
+      <h4>Tweet Analysis</h4>
+      {% if data%}
+      <div class="analysis">
+     <table style="width: fit-content;">
+      <thead>
+        <tr>
+          <th>Tweets</th>
+          <th>Polority</th>
+          <th>sentiment</th>
+          
+        </tr>
+      </thead>
+      {% for row in data %}
+      <tr>
+        <td class="tweet">{{row.tweet}} </td>
+        <td class="td" style="text-align: center;">{{row.polority}} </td>
+        <td class="td" style="text-align: center;">{{row.sentiment}} </td>
+
+      </tr>
+      {% endfor %}
+     </table>
+     {% else %}
+     <p>No data found</p>
+     {% endif %}
+    </div>
+  </div>
+  {% endblock %}

@@ -1,0 +1,30 @@
+{% extends "dashboard.html" %}
+{% block content %}
+  {{super()}}
+    <div class="views">
+      <h2 style="font-size: 10px;">View Tweets</h2>
+      {% if data%}
+      <div class="view">
+     <table>
+      <thead>
+        <tr>
+          <th>Sno</th>
+          <th>tweets</th>
+          
+        </tr>
+      </thead>
+      {% for row in data[1:] %}
+      <tr>
+
+        <td>{{ loop.index }} </td>
+        <td>{{row[5]}} </td>
+
+      </tr>
+      {% endfor %}
+     </table>
+     {% else %}
+     <p>No data found</p>
+     {% endif %}
+    </div>
+  </div>
+  {% endblock %}

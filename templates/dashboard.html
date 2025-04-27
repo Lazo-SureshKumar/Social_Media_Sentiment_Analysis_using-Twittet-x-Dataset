@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social media analysis</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+
+<body>
+  {% block content %}
+  {% include 'header.html' %}
+  <div class="row">
+    <div class="dashboard">
+      <aside class="slidebar">
+        <h3>DashBoard</h3>
+        <ul>
+          <li><a href="upload_dataset">Upload Dataset</a></li>
+          <li><a href="view">View - Tweets</a></li>
+          <li><a href="clean">Clean - Tweets</a></li>
+          <li><a href="tweetAnalysis">Tweets - Analysis</a></li>
+          <li><a href="sentiment">Sentiment - Result</a></li>
+          <li><a href="plot">Sentiment - Plot</a></li>
+          <li><a href="/">Logout</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+  {% endblock %}
+</body>
+
+</html>

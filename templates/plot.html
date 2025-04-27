@@ -1,0 +1,10 @@
+{% extends "dashboard.html" %}
+{% block content %}
+  {{super()}}
+    {% if plot_name %}
+    <h4 style="font-size: 10px;font-weight: lighter;">Sentiment Plot</h4>
+    <div class="plot">
+    <img src="{{url_for('static',filename='files/'+ plot_name)}}" alt="sentiment Plot" >
+    </div>
+    {% endif %}
+  {% endblock %}

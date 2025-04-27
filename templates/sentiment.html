@@ -1,0 +1,32 @@
+{% extends "dashboard.html" %}
+{% block content %}
+  {{super()}}
+    <div>
+      <h4 style="font-size: 10px; font-weight: lighter;">Sentiment Analysis Result</h4>
+      <div class="sentiment">
+      {% for row in res %}
+      {% if row.avg_polarity is not none %}
+      <p>Sentiment Polarity(Tweets Without feelings and Emotions)</p>
+      <p>{{row.avg_polarity}} </p>
+      {% endif %}
+      {% if row.avg_subjectivity is not none  %}
+      <p>Sentiment Subjectivity(Tweets With feelings and Emotions)</p>
+      <p>{{row.avg_subjectivity}} </p>
+      {% endif %}
+      {% endfor %}
+      {% if result %}
+        <p>No of Tweets</p>
+        {{no_of_tweet}}
+        <p>No of Positive Tweets</p>
+        {{result[0]}}
+        <p>No of Negative Tweets</p>
+        {{result[1]}}
+        <p>No of Netural Tweets</p>
+        {{result[2]}}
+      {% endif %}
+        <!-- {% for row in result %}
+        <p>{{row}}</p>
+        {% endfor %} -->
+    </div>
+  </div>
+  {% endblock %}
