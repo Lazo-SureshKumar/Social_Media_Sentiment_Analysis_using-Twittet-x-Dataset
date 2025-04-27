@@ -1,0 +1,236 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Times New Roman', Times, serif;
+	height: 100vh;
+	
+}
+
+.container{
+	background-color: #66a6ff;
+	color: white;
+	width: 100%;
+	padding: 5px;
+	height: 20px;
+	margin: 0;
+	display:inline-flex;
+}
+.container h6{
+	margin: 0;
+	padding: 5px;
+	font-size: 10px;
+}
+
+.container a{
+	position: absolute;
+	right: 10px;
+	padding: 5px;
+	margin: 0;
+	font-size: 9px;
+	text-decoration: none;
+	color: white;
+	
+}
+.login-container{
+	width: 100%;
+	height: auto;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+.log form{
+	width: 100%;
+	display: grid;
+	justify-items:auto;
+}
+.login-container h4{
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.login-container input{
+	width:fit-content;
+	padding: 5px;
+	margin-bottom: 2px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	outline: none;
+	font-size: 6px;
+}
+
+.login-container label{
+	padding: 5px;
+	width: fit-content;
+	margin-bottom: 1px;
+	border-radius: 6px;
+	outline: none;
+	font-size: 6px;
+}
+
+.login-container button{
+	padding: 5px;
+	background-color: #66a6ff;
+	border: none;
+	border-radius: 6px;
+	width: fit-content;
+	color: white;
+	font-size: 6px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+.login-container button:hover{
+	background-color: #558de8;
+}
+
+.upload form{
+	display:grid;
+	width:50%;
+	margin-top: 10px;
+}
+
+.upload form input{
+	font-size: 7px;
+	width:fit-content;
+}
+
+.upload form button{
+	font-size: 7px;
+	margin-left: 8px;
+	width:fit-content;
+	background-color: rgb(25, 212, 25);
+	border: 1px solid rgb(25, 212, 25);
+	border-radius: 2px;
+}
+
+.dashboard{
+	display: inline;
+	height: 100vh;
+	float: left;
+}
+
+.slidebar{
+	background-color: #08a0e9;
+	width: 70px;
+	height: 90vh;
+	margin-right: 10px;
+	font-size: 8px;
+	margin-top: 1px;
+	color: black;
+	padding: 10px;
+}
+
+.slidebar h3{
+	margin-bottom: auto;
+	align-self: center;
+	color: white;
+}
+
+.slidebar ul{
+	padding: 1px;
+	margin-top: 1px;
+	padding-bottom: 1px;
+	list-style: none;
+}
+
+.slidebar ul li{
+	margin: 10px 0;
+	cursor: pointer;
+}
+
+.slidebar li a{
+	text-decoration: none;
+	color: white;
+}
+
+.slidebar li a:hover{
+	color: #033f63;
+}
+
+.dataset{
+	font-size: 8px;
+	display:grid;
+	margin-left: 20px;
+}
+.dataset input{
+	font-size: 8px;
+	padding: 2px;
+	margin: 1px;
+}
+.dataset button{
+	padding: 2px;
+	margin: 1px;
+	font-size: 8px;
+}
+.row{
+	display: inline-flexbox;
+}
+
+.view{
+	display: block;
+	font-family:'Times New Roman', Times, serif;
+}
+
+.view h4{
+	font-size: 15px;
+	font-weight: normal;
+}
+.view label{
+	font-size: 8px;
+}
+
+#entries{
+	font-size: 6px;
+	height: 12px;
+	align-items: center;
+	font-weight: lighter;
+	width: 27px;
+}
+
+table{
+	border-collapse: collapse;
+	width: 70%;
+	margin-top: 15px;
+	margin-left: 8px;
+	background-color: white;
+	font-size: 7px;
+
+}
+
+th,td{
+	padding: 3px 5px;
+	text-align: left;
+	border-bottom: 1px solid gainsboro;
+	border-right: 1px solid gainsboro;
+}
+
+th{
+	text-transform: uppercase;
+	
+}
+tr:nth-child(even){
+	background-color: #e6e3e3;
+}
+
+
+.analysis{
+	display: flex;
+}
+
+.tweet{
+	display:grid;
+	width:max-content;
+}
+
+.sentiment{
+	font-size: 7px;
+	font-weight: bold;
+}
+
+.plot{
+	margin-top: 1px;
+}
+
+img{
+	max-width: 70%;
+}
